@@ -21,7 +21,7 @@ class ToDoRepository(context: Context) {
     fun getToDo() = toDoDao.getToDo()
     suspend fun addToDo(toDoModel: ToDoModel) = toDoDao.addToDo(toDoModel)
     suspend fun updateToDoList(toDoModel: ToDoModel) = toDoDao.updateToDoList(toDoModel)
-    suspend fun DeleteToDo(toDoModel: ToDoModel) = toDoDao.deleteToDo(toDoModel)
+    suspend fun deleteToDo(toDoModel: ToDoModel) = toDoDao.deleteToDo(toDoModel)
 
 
     companion object {

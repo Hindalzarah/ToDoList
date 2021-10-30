@@ -5,11 +5,13 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroud"
     tools:context=".fragments.ToDoDetailsFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         android:paddingLeft="15dp"
@@ -19,47 +21,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/titleD_textView"
+        <EditText
+            android:id="@+id/titleD_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="TextView"
-            android:textColor="#000000"
-            android:textSize="25sp" />
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:hint="To Do Title"
+            android:inputType="textPersonName" />
 
-        <TextView
-            android:id="@+id/details_textView"
+        <EditText
+            android:id="@+id/descriptionD_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:text="TextView"
-            android:textColor="#000000"
-            android:textSize="19sp" />
+            android:layout_margin="20dp"
+            android:ems="10"
+            android:hint="To Do Description"
+            android:inputType="textPersonName" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/edit_button"
+            <EditText
+                android:id="@+id/creationdateD_edittext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:backgroundTint="#2196F3"
-                android:text="Edit"
-                android:textColor="#FFFFFF" />
+                android:ems="10"
+                android:hint="creation date"
+                android:inputType="date" />
 
-            <Button
-                android:id="@+id/delete_button"
+            <EditText
+                android:id="@+id/duedateD_edittext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
+                android:layout_margin="20dp"
                 android:layout_weight="1"
-                android:backgroundTint="#E91E63"
-                android:text="delete" />
+                android:ems="10"
+                android:hint="due date"
+                android:inputType="date"
+                android:paddingStart="7dp" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#E5CEEA"
+            android:text="delete" />
+
+        <Button
+            android:id="@+id/update_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:layout_marginTop="25dp"
+            android:backgroundTint="#E5CEEA"
+            android:text="update" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="354dp"
+        android:layout_height="61dp"
+        android:background="@drawable/header_shape"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="MORE ABOUT TO DO..."
+        android:textColor="#686568"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

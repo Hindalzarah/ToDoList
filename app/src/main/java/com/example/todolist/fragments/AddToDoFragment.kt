@@ -7,11 +7,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
+import androidx.navigation.fragment.findNavController
 import com.example.todolist.R
+import com.example.todolist.viewmodel.ToDoViewModel
 
 
 class AddToDoFragment : Fragment() {
+
+    private val toDoViewModel: ToDoViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,13 +35,24 @@ class AddToDoFragment : Fragment() {
 
         val titleEditText: EditText = view.findViewById(R.id.title_edittext)
         val dueDateEditText: EditText = view.findViewById(R.id.dueDate_edittext)
-        val detailsEditText: EditText = view.findViewById(R.id.details_edittext)
+        val descriptionEditText: EditText = view.findViewById(R.id.description_edittext)
         val saveButton: Button = view.findViewById(R.id.save_button)
 
         saveButton.setOnClickListener {
 
 
+            var title = titleEditText.text.toString()
+            var dueDate = dueDateEditText.text.toString()
+            var description = descriptionEditText.text.toString()
 
+            if (title.isNotEmpty() && dueDate.isNotEmpty() && description.isNotEmpty())
+                toDoViewModel.addToDo(title,dueDate,false,description)
+
+
+            findNavController().popBackStack()
+
+
+            Toast.makeText(requireContext(), "Todo Successfully Added! :)", Toast.LENGTH_LONG).show()
         }
 
     }

@@ -5,11 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.R
+import com.example.todolist.adapter.ToDosAdapter
+import com.example.todolist.database.ToDoModel
+import com.example.todolist.viewmodel.ToDoViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class DisplayToDosFragment : Fragment() {
+
+
+
+ private val todosList = mutableListOf<ToDoModel>()
+    private val toDoViewModel: ToDoViewModel by activityViewModels()
+
 
 
 
@@ -29,15 +41,29 @@ class DisplayToDosFragment : Fragment() {
         // initialization of the recyclerview
         val todoRecyclerView: RecyclerView = view.findViewById(R.id.todos_recyclerview)
 
-        val addFloatingActionButton: FloatingActionButton = view.findViewById(R.id.add_floatingActionButton)
+        val toDoAcapter = ToDosAdapter(todosList,toDoViewModel)
+
+        todoRecyclerView.adapter = toDoAcapter
+
+        toDoViewModel.todoitems.observe(viewLifecycleOwner, Observer {
+
+            it?.let { todos ->
+
+                todosList.clear()
+                todosList.addAll(todos)
+
+                toDoAcapter.notifyDataSetChanged()
+            }
+
+        })
 
 
-        addFloatingActionButton.setOnClickListener{
+
+        val addFloatingActionButton: FloatingActionButton = view.findViewById(R.id.add_floatingbutton)
 
 
-
-
-
+        addFloatingActionButton.setOnClickListener {
+            findNavController().navigate(R.id.action_displayToDosFragment_to_addToDoFragment)
         }
 
     }

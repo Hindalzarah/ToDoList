@@ -8,8 +8,10 @@ import java.util.*
 data class ToDoModel(
 
     var title: String,
-    var date: Date,
+    var dueDate: String,
+    var creationtDate: String,
     var isDone: Boolean,
+    var description: String,
 
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,

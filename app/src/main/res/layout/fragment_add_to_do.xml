@@ -5,11 +5,29 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AddToDoFragment" >
+    android:background="@color/backgroud"
+    tools:context=".fragments.AddToDoFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="190dp"
+        android:layout_height="76dp"
+        android:fontFamily="@font/baloo_tamma"
+        android:gravity="center"
+        android:text="ADD TODO"
+        android:textColor="@color/gray"
+        android:textSize="33dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +60,7 @@
             android:paddingEnd="15dp" />
 
         <EditText
-            android:id="@+id/details_edittext"
+            android:id="@+id/description_edittext"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
@@ -58,7 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:backgroundTint="#4CAF50"
+            android:backgroundTint="#E5CEEA"
             android:text="save" />
 
     </LinearLayout>
