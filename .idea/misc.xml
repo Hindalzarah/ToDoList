@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.253125" />
+        <entry key="app/src/main/res/drawable/buttons.xml" value="0.49587632618400285" />
         <entry key="app/src/main/res/drawable/delete_button.xml" value="0.253125" />
         <entry key="app/src/main/res/drawable/header_shape.xml" value="0.29128205128205126" />
         <entry key="app/src/main/res/drawable/ic_baseline_check_24.xml" value="0.29128205128205126" />

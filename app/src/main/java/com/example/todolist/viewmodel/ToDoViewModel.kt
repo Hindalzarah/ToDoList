@@ -20,7 +20,7 @@ class ToDoViewModel: ViewModel() {
     val sortOrder = MutableStateFlow(SortOrder.BY_DATE)
     val hideCompleted = MutableStateFlow(false)
 
-    // viewmodel holds the data so now we have to call the datay
+    // viewmodel holds the data so now we have to call the data
 
     // variable for the data that we're going to call
 

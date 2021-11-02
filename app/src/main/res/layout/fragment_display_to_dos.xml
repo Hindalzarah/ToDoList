@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8EAF6"
+    android:background="#CCE3B2"
     tools:context=".fragments.DisplayToDosFragment">
 
     <LinearLayout
@@ -99,9 +99,10 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="52dp"
+        android:background="@drawable/buttons"
         android:clickable="true"
         android:src="@drawable/ic_baseline_check_24"
-        app:backgroundTint="#E6C6EC"
+        app:backgroundTint="#6FA572"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:rippleColor="#FFFFFF" />
