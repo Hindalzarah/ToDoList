@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroud"
+    android:background="#E8EAF6"
     tools:context=".fragments.DisplayToDosFragment">
 
     <LinearLayout
@@ -84,6 +84,9 @@
         android:id="@+id/todos_recyclerview"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/header_shape"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +100,7 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="52dp"
         android:clickable="true"
-        android:src="@android:drawable/ic_input_add"
+        android:src="@drawable/ic_baseline_check_24"
         app:backgroundTint="#E6C6EC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

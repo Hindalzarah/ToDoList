@@ -1,20 +1,20 @@
 package com.example.todolist.fragments
 
+import android.app.DatePickerDialog
+import android.content.DialogInterface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.todolist.R
 import com.example.todolist.viewmodel.ToDoViewModel
 
 
-class AddToDoFragment : Fragment() {
+class AddToDoFragment : Fragment(){
 
     private val toDoViewModel: ToDoViewModel by activityViewModels()
 
@@ -38,15 +38,38 @@ class AddToDoFragment : Fragment() {
         val descriptionEditText: EditText = view.findViewById(R.id.description_edittext)
         val saveButton: Button = view.findViewById(R.id.save_button)
 
+        val datePicker = DatePickerDialog(requireActivity(), R.style.DialogTheme)
+        datePicker.setTitle("DUE DATE")
+
+
+        datePicker.setButton(DialogInterface.BUTTON_POSITIVE,"OK"){ D, I ->
+
+
+
+            var day = datePicker.datePicker.dayOfMonth
+            var month =datePicker.datePicker.month
+            var year = datePicker.datePicker.year
+
+
+
+            dueDateEditText.setText("$day/${month+1}/$year")
+
+        }
+
+
+        dueDateEditText.setOnClickListener {
+            datePicker.show()
+        }
+
+
         saveButton.setOnClickListener {
 
-
             var title = titleEditText.text.toString()
-            var dueDate = dueDateEditText.text.toString()
             var description = descriptionEditText.text.toString()
+            var duedate = dueDateEditText.text.toString()
 
-            if (title.isNotEmpty() && dueDate.isNotEmpty() && description.isNotEmpty())
-                toDoViewModel.addToDo(title,dueDate,false,description)
+            if (title.isNotEmpty() && duedate.isNotEmpty() && description.isNotEmpty())
+                toDoViewModel.addToDo(title,duedate,false,description)
 
 
             findNavController().popBackStack()

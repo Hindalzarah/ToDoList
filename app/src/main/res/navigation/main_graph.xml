@@ -8,23 +8,26 @@
     <fragment
         android:id="@+id/displayToDosFragment"
         android:name="com.example.todolist.fragments.DisplayToDosFragment"
-        android:label="fragment_display_to_dos"
-        tools:layout="@layout/fragment_display_to_dos" >
+        android:label="Todos..."
+        tools:layout="@layout/fragment_display_to_dos">
         <action
             android:id="@+id/action_displayToDosFragment_to_addToDoFragment"
             app:destination="@id/addToDoFragment" />
         <action
             android:id="@+id/action_displayToDosFragment_to_toDoDetailsFragment"
-            app:destination="@id/toDoDetailsFragment" />
+            app:destination="@id/toDoDetailsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
     <fragment
         android:id="@+id/addToDoFragment"
         android:name="com.example.todolist.fragments.AddToDoFragment"
-        android:label="fragment_add_to_do"
+        android:label="Add A Todo.."
         tools:layout="@layout/fragment_add_to_do" />
     <fragment
         android:id="@+id/toDoDetailsFragment"
         android:name="com.example.todolist.fragments.ToDoDetailsFragment"
-        android:label="fragment_to_do_details"
+        android:label="Todo Details.."
         tools:layout="@layout/fragment_to_do_details" />
 </navigation>

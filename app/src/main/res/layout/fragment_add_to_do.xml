@@ -5,13 +5,13 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroud"
+    android:background="#E8EAF6"
     tools:context=".fragments.AddToDoFragment">
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="190dp"
-        android:layout_height="76dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:fontFamily="@font/baloo_tamma"
         android:gravity="center"
         android:text="ADD TODO"
@@ -26,8 +26,10 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="383dp"
+        android:layout_height="500dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/header_shape"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -47,17 +49,6 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp" />
 
-        <EditText
-            android:id="@+id/dueDate_edittext"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_marginBottom="20dp"
-            android:ems="10"
-            android:hint="Todo Due Date"
-            android:inputType="date"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp" />
 
         <EditText
             android:id="@+id/description_edittext"
@@ -71,6 +62,20 @@
             android:paddingStart="15dp"
             android:paddingEnd="15dp" />
 
+        <EditText
+            android:id="@+id/dueDate_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="20dp"
+            android:editable="false"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Due Date"
+            android:inputType="textPersonName"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp" />
+
         <Button
             android:id="@+id/save_button"
             android:layout_width="match_parent"
@@ -78,6 +83,7 @@
             android:layout_margin="20dp"
             android:backgroundTint="#E5CEEA"
             android:text="save" />
+
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

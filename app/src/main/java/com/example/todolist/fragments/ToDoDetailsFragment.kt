@@ -1,5 +1,7 @@
 package com.example.todolist.fragments
 
+import android.app.DatePickerDialog
+import android.content.DialogInterface
 import android.icu.text.CaseMap
 import android.os.Bundle
 import android.text.TextUtils
@@ -68,31 +70,44 @@ class ToDoDetailsFragment : Fragment() {
 
 
 
-        fun inputCheck(title: String, description: String, dueDate: String, creation: String): Boolean {
+        val datePicker = DatePickerDialog(requireActivity(), R.style.DialogTheme)
+        datePicker.setTitle("DUE DATE")
 
 
-            return !(TextUtils.isEmpty(title) ) && !(TextUtils.isEmpty(description) )
-                    && !(TextUtils.isEmpty(dueDate) )
+        datePicker.setButton(DialogInterface.BUTTON_POSITIVE,"OK"){ D, I ->
+
+
+
+            var day = datePicker.datePicker.dayOfMonth
+            var month =datePicker.datePicker.month
+            var year = datePicker.datePicker.year
+
+
+
+            dueDate.setText("$day/${month+1}/$year")
 
         }
-        fun updateTodo() {
 
-            val title = titleTextView.text.toString()
-            val description = descriptionTextView.text.toString()
-            val dueDate = dueDate.text.toString()
-            val creationDate = creationDateTextView.text.toString()
 
+        dueDate.setOnClickListener {
+            datePicker.show()
         }
-
-
-
 
         updateButton.setOnClickListener {
 
+            selectedTodo.title = titleTextView.text.toString()
+            selectedTodo.description = descriptionTextView.text.toString()
+            selectedTodo.dueDate = dueDate.text.toString()
+            selectedTodo.creationtDate = creationDateTextView.text.toString()
 
             toDoViewModel.updateTodoList(selectedTodo)
             findNavController().popBackStack()
         }
+
+
+
+
+
 
 
 

@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroud"
+    android:background="#E8EAF6"
     tools:context=".fragments.ToDoDetailsFragment">
 
     <LinearLayout

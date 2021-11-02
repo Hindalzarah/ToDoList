@@ -1,5 +1,6 @@
 package com.example.todolist.adapter
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.todolist.R
 import com.example.todolist.database.ToDoModel
 import com.example.todolist.viewmodel.ToDoViewModel
+import java.text.SimpleDateFormat
 import java.util.*
 
 class ToDosAdapter(val todos: List<ToDoModel>, val toDoViewModel: ToDoViewModel): RecyclerView.Adapter<ToDosAdapter.ToDosViewHolder>() {
@@ -41,7 +43,48 @@ class ToDosAdapter(val todos: List<ToDoModel>, val toDoViewModel: ToDoViewModel)
         holder.title.text = todo.title
         holder.date.text= todo.dueDate
         holder.doneCheckBox.isChecked = todo.isDone
-        holder.currentDate.text = todo.creationtDate
+        holder.currentDate.text = "creation date: ${todo.creationtDate}"
+
+
+
+        var dueDate = Date()
+
+        val format = SimpleDateFormat("yyyy/MM/dd")
+        val date = format.parse(todo.dueDate)
+
+        if(dueDate> date)
+
+
+        {
+
+
+            holder.title.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            holder.date.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            holder.doneCheckBox.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+
+
+        }
+
+        holder.doneCheckBox.setOnClickListener {
+
+
+            if (holder.doneCheckBox.isChecked ) {
+                holder.title.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+                holder.date.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+                holder.doneCheckBox.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
+            } else {
+
+
+                holder.title.paintFlags = 0
+                holder.date.paintFlags = 0
+                holder.doneCheckBox.paintFlags = 0
+
+            }
+
+
+
+        }
+
 
         // to open the details fragment
 
@@ -49,6 +92,7 @@ class ToDosAdapter(val todos: List<ToDoModel>, val toDoViewModel: ToDoViewModel)
 
 
             toDoViewModel.selectedItemMutableLiveData.postValue(todo)
+
             it.findNavController().navigate(R.id.action_displayToDosFragment_to_toDoDetailsFragment)
         }
 
