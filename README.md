@@ -5,8 +5,10 @@
 
 #### **THIS REPOSITORY WILL CONTAIN AN ANDROID TO DO LIST APP**
 
-## topics we're going to talk about in this readme file:
+<hr>
 
+## topics we're going to talk about in this readme file:
+<hr>
 * List of technologies I  used to develop this app.
 * Link to my wireframe in this case I used Figma.
 * My user stories.
@@ -18,13 +20,15 @@
 
 
 ### TECHNOLOGIES:
-
+<hr>
 First thing, I used figma to help me do a scetch of how I want my app to look like.
 then I used android studio and took my figma scetch and transformed it into a deisgn using the android studio xml layout.
 lastly, I started working on my app and I started writing the logic of the app using kotlin langauge. 
 
 
 ### Wireframe _**FIGMA**_ link:
+
+<hr>
 
 [Figma](https://www.figma.com/file/Zy3MOlhK10e1vjGoK68m9w/Untitled?node-id=24%3A12)
 
@@ -36,21 +40,23 @@ lastly, I started working on my app and I started writing the logic of the app u
 3. As a user, I want to be able to search for a specific task so that I can find the task that I'm looking for easily.
 4. As a user, I want to be able to sort and filter the tasks by different catagories like filtering the completed tasks and sorting the tasks alphabetically.
 
+<hr>
 
 
 ### My Development Process:
 
 
-
+<hr>
 
 
 ### Unsolved problems and diffeclties:
 
+<hr>
 
 
 
 ### Favorite Functions:
-
+<hr>
 
 
 
