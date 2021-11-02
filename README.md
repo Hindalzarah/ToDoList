@@ -29,4 +29,31 @@ lastly, I started working on my app and I started writing the logic of the app u
 [Figma](https://www.figma.com/file/Zy3MOlhK10e1vjGoK68m9w/Untitled?node-id=24%3A12)
 
 
+### USER STORIES:
+
+1. As a user, I want an app that can help me to document my tasks "todos" so that I can always go back to it and see the tasks I'm supposed to do.
+2. As a user, I want a feature in the app that allows me to add, update, delete tasks so that I can always be up-to-date.
+3. As a user, I want to be able to search for a specific task so that I can find the task that I'm looking for easily.
+4. As a user, I want to be able to sort and filter the tasks by different catagories like filtering the completed tasks and sorting the tasks alphabetically.
+
+
+
+### My Development Process:
+
+
+
+
+
+### Unsolved problems and diffeclties:
+
+
+
+
+### Favorite Functions:
+
+
+
+
+
+
 
