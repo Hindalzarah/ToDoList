@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8EAF6"
+    android:background="#CCE3B2"
     tools:context=".fragments.AddToDoFragment">
 
     <TextView
@@ -81,7 +81,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:backgroundTint="#E5CEEA"
+            android:backgroundTint="#3A8E3D"
             android:text="save" />
 
 

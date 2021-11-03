@@ -10,25 +10,17 @@ import java.util.*
 
 class ToDoViewModel: ViewModel() {
 
-    // the viewmodel has a connection with the repository so the first thing that we do is calling the repository
 
 
-
-
+    //getting the repository
    private val toDoRepository = ToDoRepository.get()
-    val searchQuery = toDoRepository.searchQuery
+
+
+
+
     val sortOrder = MutableStateFlow(SortOrder.BY_DATE)
-    val hideCompleted = MutableStateFlow(false)
-
-    // viewmodel holds the data so now we have to call the data
-
-    // variable for the data that we're going to call
-
     var todoitems = toDoRepository.getToDo()
-
     fun getSearchItems(query: String) = toDoRepository.getSearchItems(query)
-
-
     var selectedItemMutableLiveData = MutableLiveData<ToDoModel>()
 
 
@@ -44,17 +36,13 @@ class ToDoViewModel: ViewModel() {
         }
 
     }
-
     fun updateTodoList(toDoModel: ToDoModel) = viewModelScope.launch { toDoRepository.updateToDoList(toDoModel) }
-
-
     fun deleteToDo(toDoModel: ToDoModel) = viewModelScope.launch { toDoRepository.deleteToDo(toDoModel) }
-
-
     fun deleteCompletedTask() = viewModelScope.launch { toDoRepository.deleteCompletedTask() }
-
     fun getHideCompletedTasks(isHide: Boolean) = toDoRepository.getItems(isHide)
     }
 
+
+// an enum class for the constants
 enum class SortOrder{ BY_NAME, BY_DATE
 }

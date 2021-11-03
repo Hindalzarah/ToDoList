@@ -42,7 +42,6 @@ class ToDoDetailsFragment : Fragment() {
         val descriptionTextView: EditText = view.findViewById(R.id.descriptionD_edittext)
         val creationDateTextView: EditText = view.findViewById(R.id.creationdateD_edittext)
         val dueDate: EditText = view.findViewById(R.id.duedateD_edittext)
-
         val deleteButton: Button = view.findViewById(R.id.delete_button)
         val updateButton: Button = view.findViewById((R.id.update_button))
 
@@ -71,7 +70,7 @@ class ToDoDetailsFragment : Fragment() {
 
 
         val datePicker = DatePickerDialog(requireActivity(), R.style.DialogTheme)
-        datePicker.setTitle("DUE DATE")
+        datePicker.setTitle("SELECT A DATE")
 
 
         datePicker.setButton(DialogInterface.BUTTON_POSITIVE,"OK"){ D, I ->
@@ -103,16 +102,6 @@ class ToDoDetailsFragment : Fragment() {
             toDoViewModel.updateTodoList(selectedTodo)
             findNavController().popBackStack()
         }
-
-
-
-
-
-
-
-
-
-
 
 
     }

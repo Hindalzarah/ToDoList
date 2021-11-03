@@ -44,10 +44,12 @@ class DisplayToDosFragment : Fragment() {
         // initialization of the recyclerview
         val todoRecyclerView: RecyclerView = view.findViewById(R.id.todos_recyclerview)
 
+        //calling the adapter
         toDoAcapter = ToDosAdapter(todosList,toDoViewModel)
 
         todoRecyclerView.adapter = toDoAcapter
 
+        //livedata
         toDoViewModel.todoitems.observe(viewLifecycleOwner, Observer {
 
             it?.let { todos ->
@@ -62,12 +64,15 @@ class DisplayToDosFragment : Fragment() {
 
 
 
+
         val addFloatingActionButton: FloatingActionButton = view.findViewById(R.id.add_floatingbutton)
 
 
+        // onClickListener to set an action for the button
         addFloatingActionButton.setOnClickListener {
             findNavController().navigate(R.id.action_displayToDosFragment_to_addToDoFragment)
         }
+
 
 
         setHasOptionsMenu(true)
@@ -75,6 +80,7 @@ class DisplayToDosFragment : Fragment() {
 
     }
 
+    //function for the creation of the optionMenu
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_fragment_tasks, menu)
         // finding search menu
@@ -84,9 +90,11 @@ class DisplayToDosFragment : Fragment() {
             fetchDate(it)
         }
     }
-
+      //function for when an option is selected in the menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
+
+            //sort by name option
             R.id.action_sort_by_name -> {
                 toDoViewModel.sortOrder.value = SortOrder.BY_NAME
 
@@ -97,6 +105,7 @@ class DisplayToDosFragment : Fragment() {
 
                 true
             }
+            //sort by date option
             R.id.action_sort_by_date_created ->   {
                 toDoViewModel.sortOrder.value = SortOrder.BY_DATE
                 todosList.sortBy {
@@ -108,6 +117,7 @@ class DisplayToDosFragment : Fragment() {
                 true
 
 
+                //filtering and hiding the completed tasks
             } R.id.action_hide_completed_tasks ->{
                 item.isChecked = !item.isChecked
 
@@ -123,6 +133,7 @@ class DisplayToDosFragment : Fragment() {
                 } )
                 true
             }
+            //filtering and deleting the completed tasks
             R.id.action_delete_all_completed_tasks ->{
                 toDoViewModel.deleteCompletedTask()
 
@@ -131,6 +142,8 @@ class DisplayToDosFragment : Fragment() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    //fetches and updates data when you search for a todo
 
     fun fetchDate(query: String) {
         toDoViewModel.getSearchItems(query).observe(viewLifecycleOwner, {

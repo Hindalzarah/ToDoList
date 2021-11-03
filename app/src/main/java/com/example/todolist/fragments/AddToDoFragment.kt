@@ -37,26 +37,20 @@ class AddToDoFragment : Fragment(){
         val dueDateEditText: EditText = view.findViewById(R.id.dueDate_edittext)
         val descriptionEditText: EditText = view.findViewById(R.id.description_edittext)
         val saveButton: Button = view.findViewById(R.id.save_button)
-
         val datePicker = DatePickerDialog(requireActivity(), R.style.DialogTheme)
-        datePicker.setTitle("DUE DATE")
+        datePicker.setTitle("SELECT DATE")
 
 
         datePicker.setButton(DialogInterface.BUTTON_POSITIVE,"OK"){ D, I ->
-
-
-
             var day = datePicker.datePicker.dayOfMonth
             var month =datePicker.datePicker.month
             var year = datePicker.datePicker.year
 
-
-
             dueDateEditText.setText("$day/${month+1}/$year")
-
         }
 
 
+        // to show the date picker by clicking on the due date edit text.
         dueDateEditText.setOnClickListener {
             datePicker.show()
         }

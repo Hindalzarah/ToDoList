@@ -5,7 +5,7 @@
     android:id="@+id/frameLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E8EAF6"
+    android:background="#CCE3B2"
     tools:context=".fragments.ToDoDetailsFragment">
 
     <LinearLayout
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:layout_marginTop="25dp"
-            android:backgroundTint="#E5CEEA"
+            android:backgroundTint="#3A8E3D"
             android:text="delete" />
 
         <Button
@@ -81,7 +81,7 @@
             android:layout_height="match_parent"
             android:layout_margin="20dp"
             android:layout_marginTop="25dp"
-            android:backgroundTint="#E5CEEA"
+            android:backgroundTint="#3A8E3D"
             android:text="update" />
     </LinearLayout>
 
