@@ -44,18 +44,28 @@ lastly, I started working on my app and I started writing the logic of the app u
 
 
 ### My Development Process:
-
+ 
+ * Planning: First, I started to plan how I want my application to look like, and how it's going to function, what features I want to include in it.
+ * Requirement specification: Second, I went ahead and documented the requirements and specifications that were asked from me to develop the app.
+ * Design: Third, I begin to design the app using figma, I picked the primary and secondary colors for my app, started to design my buttons and layout.
+ * Coding: Forth, I started to work on my code and the logic behind it and wrote the functions I needed for my app to work.
+ * Testing: Fifth, Finally, I started  testing my app using the debugging tools in the android studio.
 
 <hr>
 
 
 ### Unsolved problems and diffeclties:
 
+I tried using the FlowData for my getSearchItems function but I want unable to successeed because I found it hard to understand.
+
 <hr>
 
 
 
 ### Favorite Functions:
+
+The getSearchItems  "for the search bar" is my favorite function because it was new to me and I worked hard to make it work, I searched a lot, asked around and finally I was able to write the proper function.
+
 <hr>
 
 
