@@ -62,7 +62,9 @@
 
 ### Unsolved problems and diffeclties:
 
-I tried using the FlowData for my getSearchItems function but I was unable to successeed because I found it hard to understand.
+* I tried to sort my views based on the due date but I was unable to compete it because I used declared the due date as a string.
+
+* I tried using the FlowData for my getSearchItems function but I was unable to successeed because I found it hard to understand.
 
 <hr>
 
