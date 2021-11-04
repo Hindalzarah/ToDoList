@@ -8,7 +8,9 @@
 <hr>
 
 ## topics we're going to talk about in this readme file:
+
 <hr>
+
 * List of technologies I  used to develop this app.
 * Link to my wireframe in this case I used Figma.
 * My user stories.
@@ -20,7 +22,9 @@
 
 
 ### TECHNOLOGIES:
+
 <hr>
+
 * I used figma to help me do a scetch of how I want my app to look like.
 * I used android studio and took my figma scetch and transformed it into a deisgn using the android studio xml layout.
 * I started working on my app and I started writing the logic of the app using kotlin langauge. 
@@ -29,10 +33,11 @@
 
 ### Wireframe _**FIGMA**_ link:
 
-<hr>
+
 
 [Figma](https://www.figma.com/file/Zy3MOlhK10e1vjGoK68m9w/Untitled?node-id=24%3A12)
 
+<hr>
 
 ### USER STORIES:
 
