@@ -50,13 +50,16 @@ class ToDosAdapter(val todos: List<ToDoModel>, val toDoViewModel: ToDoViewModel)
         val format = SimpleDateFormat("yyyy/MM/dd")
         val date = format.parse(todo.dueDate)
 
-        if (dueDate < date) {
+        if (dueDate > date) {
 
             holder.title.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
             holder.date.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
             holder.doneCheckBox.paintFlags = Paint.STRIKE_THRU_TEXT_FLAG
-
-
+        }
+        else {
+            holder.title.paintFlags = 0
+            holder.date.paintFlags = 0
+            holder.doneCheckBox.paintFlags = 0
         }
 
         holder.doneCheckBox.setOnClickListener {

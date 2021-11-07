@@ -46,7 +46,7 @@ class AddToDoFragment : Fragment(){
             var month =datePicker.datePicker.month
             var year = datePicker.datePicker.year
 
-            dueDateEditText.setText("$day/${month+1}/$year")
+            dueDateEditText.setText("$year/${month+1}/$day")
         }
 
 
