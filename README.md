@@ -8,7 +8,9 @@
 <hr>
 
 ## topics we're going to talk about in this readme file:
+
 <hr>
+
 * List of technologies I  used to develop this app.
 * Link to my wireframe in this case I used Figma.
 * My user stories.
@@ -20,18 +22,26 @@
 
 
 ### TECHNOLOGIES:
+
 <hr>
-First thing, I used figma to help me do a scetch of how I want my app to look like.
-then I used android studio and took my figma scetch and transformed it into a deisgn using the android studio xml layout.
-lastly, I started working on my app and I started writing the logic of the app using kotlin langauge. 
+
+* I used figma to help me do a scetch of how I want my app to look like.
+* I used android studio and took my figma scetch and transformed it into a deisgn using the android studio xml layout.
+* I started working on my app and I started writing the logic of the app using kotlin langauge. 
+* I used Room for my database 
 
 
 ### Wireframe _**FIGMA**_ link:
 
-<hr>
+
 
 [Figma](https://www.figma.com/file/Zy3MOlhK10e1vjGoK68m9w/Untitled?node-id=24%3A12)
 
+
+
+<img src="https://github.com/Hindalzarah/ToDoList/blob/2b740302ebe7b164ced8753c8602d23a265c9896/Screen%20Shot%201443-03-29%20at%201.43.09%20PM.png" alt="drawing" width="600"/>
+
+<hr>
 
 ### USER STORIES:
 
@@ -56,7 +66,9 @@ lastly, I started working on my app and I started writing the logic of the app u
 
 ### Unsolved problems and diffeclties:
 
-I tried using the FlowData for my getSearchItems function but I want unable to successeed because I found it hard to understand.
+* I tried to sort my views based on the due date but I was unable to compete it because I used declared the due date as a string.
+
+* I tried using the FlowData for my getSearchItems function but I was unable to successeed because I found it hard to understand.
 
 <hr>
 
@@ -70,6 +82,18 @@ The getSearchItems  "for the search bar" is my favorite function because it was 
 
 
 
+### Application Screenshots:
+
+<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%2012.19.43%20PM.png" alt="drawing" width="200"/>
+
+<img src="https://github.com/Hindalzarah/ToDoList/blob/3731e36ac1aa80be97a93dd302433b9bcb3d069c/Screen%20Shot%201443-03-28%20at%201.31.41%20PM.png" alt="drawing" width="200"/>
+
+<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%201.35.28%20PM.png" alt="drawing" width="200"/>
+
+<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%201.37.48%20PM.png" alt="drawing" width="200"/>
+
+<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%204.47.06%20PM.png" alt="drawing" width="200"/>
 
 
+<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%204.52.56%20PM.png" alt="drawing" width="200"/>
 
