@@ -82,18 +82,4 @@ The getSearchItems  "for the search bar" is my favorite function because it was 
 
 
 
-### Application Screenshots:
-
-<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%2012.19.43%20PM.png" alt="drawing" width="200"/>
-
-<img src="https://github.com/Hindalzarah/ToDoList/blob/3731e36ac1aa80be97a93dd302433b9bcb3d069c/Screen%20Shot%201443-03-28%20at%201.31.41%20PM.png" alt="drawing" width="200"/>
-
-<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%201.35.28%20PM.png" alt="drawing" width="200"/>
-
-<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%201.37.48%20PM.png" alt="drawing" width="200"/>
-
-<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%204.47.06%20PM.png" alt="drawing" width="200"/>
-
-
-<img src="https://github.com/Hindalzarah/ToDoList/blob/3d025c99a7883b968dc2820d453a79abd96b225a/Screen%20Shot%201443-03-28%20at%204.52.56%20PM.png" alt="drawing" width="200"/>
 
